@@ -1,0 +1,480 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    color: white;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../img/portatil.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+.navegator {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.25em;
+}
+
+.navegator ul {
+    list-style: none;
+    display: flex;
+}
+
+.navegator ul a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+#close {
+    display: none;
+}
+
+.container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 0 5%;
+}
+
+.container h1 {font-size: 3rem;}
+.container p {font-size: 1.5em; margin-top: 20px;}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background-color: #2091f9;
+    color: white;
+    text-decoration: none;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.about {
+    width: 90%;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2rem;
+}
+
+.about-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.about-icons {
+    min-width: 250px;
+    width: 30%;
+    margin: auto;
+}
+
+.title2 {
+    font-size: 2.5rem;
+}
+
+.about-icons h3 {
+    font-size: 2rem;
+}
+
+.about-icons p {
+    line-height: 1.5;
+}
+
+.about-icons img {
+    width: 40px;
+}
+
+.knowledge {
+    background-color: #92929250;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 120px 5%;
+}
+
+.knowledge-div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 360px;
+    margin: auto;
+    padding: 10px;
+}
+
+.knowledge-div p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.knowledge-div a {
+    margin: 20px auto 0 0;
+}
+
+.knowledge img {
+    width: 50%;
+    min-width: 360px;
+    margin: auto;
+}
+
+.prices {
+    text-align: center;
+    margin: 120px 5%;
+}
+
+.prices-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.prices-element {
+    background-color: #e5e5f7;
+    border-radius: 10px;
+    padding: 40px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.prices-element h3 {
+    font-size: 2.5em;
+}
+
+.plan p {
+    margin: 10px 0;
+}
+
+.btn2 {
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+.best {
+    background-color: #ff7143;
+    color: #fff;
+    padding: 60px 40px;
+}
+
+.best .btn2 {
+    background-color: #9f3919;
+    color: #fff;
+}
+
+.testimony {
+    background-color: #e5e5f7;
+    padding: 120px 5%;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+.testimony-body {
+    display: none;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+}
+
+.testimony .show {
+    display: flex;
+    animation: aparecer 2s;
+}
+
+.testimony-body h2 { font-size: 2em; }
+
+.testimony-body div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.testimony-body div p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.testimony-body img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.testimony-arrow {
+    width: 50px;
+    cursor: pointer;
+}
+
+.questions {
+    text-align: center;
+    margin: 120px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.questions p { font-size: 1.2em; }
+
+.quest {
+    margin: 20px 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.quest-title {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(15, 15, 83);
+    font-size: 1.7em;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.arrow-circle, .quest-span {
+    width: 25px;
+    height: 25px;
+    transition: transform .3s;
+}
+
+.quest-text {
+    height: 0;
+    overflow: hidden;
+    text-align: start;
+    transition: height .3s;
+}
+
+.quest-text-rotate {
+    transform: rotate(180deg);
+}
+
+.questions-offer {
+    padding: 40px 10% 120px 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.questions-offer p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #1d293f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 10% 0 10%;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid;
+}
+
+.footer-container nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.footer-container nav ul li{
+    padding: 10px 0;
+}
+
+.footer-container nav ul a{
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+
+.footer-form h2 {
+    margin-bottom: 5px;
+}
+
+#userEmail, #btn-submit {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#btn-submit {
+    color: #fff;
+    background-color: #2091f9;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-copy {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu, #close {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .7s;
+    }
+
+    .menu-show {
+        display: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    #close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .container h1 {
+        font-size: 2.5em;
+    }
+
+    .knowledge {
+        text-align: center;
+        flex-wrap: wrap-reverse;
+    }
+    
+    .knowledge-div a {
+        margin: 20px auto;
+    }
+
+    .testimony {
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    .testimony-body {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 1.3em;
+        font-size: 1.3em;
+    }
+
+    .footer-container nav, .footer-form {
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .container h1 { font-size: 2em; }
+    .container p { font-size: 1em; }
+    .title2 { font-size: 1.8em; }
+    .testimony-body h2 { font-size: 1.7em; }
+    .testimony-body div p { font-size: 1.1em; }
+    .testimony { gap: 1em; }
+    .prices-element h3 { font-size: 2.2em; }
+    .quest-title { font-size: 1.6em; }
+
+    .testimony-body img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .testimony > img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .knowledge-div {
+        width: 100%;
+        min-width: 200px;
+        padding: 10px;
+    }
+    
+    .knowledge img {
+        width: 100%;
+        min-width: 200px;
+    }
+
+}
