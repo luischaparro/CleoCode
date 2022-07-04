@@ -1,8 +1,10 @@
+const getarray = (c) => { return document.getElementsByClassName(c) };
+const $ = (e) => { return document.querySelector(e) };
 
-(function(){
-    const sliders = [...document.querySelectorAll('.testimony-body')];
-    const btnNext = document.querySelector('#next');
-    const btnBefore = document.querySelector('#before');
+(function () {
+    const sliders = getarray('testimony-body');
+    const btnNext = $('#next');
+    const btnBefore = $('#before');
 
     btnNext.addEventListener('click', () => {
         changePosition(1);
@@ -13,22 +15,27 @@
     });
 
     const changePosition = (add) => {
-        const currentTestimony = document.querySelector('.show').dataset.id;
+        const currentTestimony = $('.show').dataset.id;
         let value = Number(currentTestimony);
-        sliders[value-1].classList.remove('show');
+        sliders[value - 1].classList.remove('show');
         value += add;
         if (value === sliders.length + 1 || value === 0) {
             value = value === 0 ? sliders.length : 1;
         }
-        sliders[value-1].classList.add('show');
+        sliders[value - 1].classList.add('show');
     };
+    
+    let intervalo_en_segundos = 10
+
+    setInterval(changePosition, intervalo_en_segundos * 1000, 1)
+
 })();
 
-(function(){
-    const btnCircle = [...document.querySelectorAll('.quest-title')];
-    const questText = [...document.querySelectorAll('.quest-text')];
+(function () {
+    const btnCircle = getarray('quest-title');
+    const questText = getarray('quest-text');
 
-     btnCircle.forEach(question => {
+    for (let question of btnCircle) {
         question.addEventListener('click', () => {
             let height = 0;
             let answer = question.nextElementSibling;
@@ -41,15 +48,15 @@
 
             answer.style.height = `${height}px`;
         })
-     })
+    };
 
 })();
 
-(function(){
+(function () {
     const menuImg = document.querySelector('.menu');
     const menu = document.querySelector('.nav-menu');
     const closeMenu = document.querySelector('#close');
-    
+
     menuImg.addEventListener('click', () => {
         menu.classList.add('menu-show');
     });
