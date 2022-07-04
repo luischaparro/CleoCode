@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+:root{
+    --btn1: #2091f9;
+    --btn2: #ffffff;
 }
 
 header {
@@ -21,6 +30,7 @@ header::before {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../img/portatil.jpg');
+    background-attachment: fixed;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
     z-index: -1;
@@ -72,7 +82,7 @@ header::before {
 .container h1 {font-size: 3rem;}
 .container p {font-size: 1.5em; margin-top: 20px;}
 
-.btn {
+/*.btn {
     padding: 12px 30px;
     border-radius: 30px;
     background-color: #2091f9;
@@ -80,7 +90,7 @@ header::before {
     text-decoration: none;
     margin: 20px auto;
     cursor: pointer;
-}
+}*/
 
 .about {
     width: 90%;
@@ -174,6 +184,7 @@ header::before {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    cursor: pointer;
 }
 
 .prices-element h3 {
@@ -198,6 +209,7 @@ header::before {
     background-color: #ff7143;
     color: #fff;
     padding: 60px 40px;
+    cursor: pointer;
 }
 
 .best .btn2 {
@@ -477,4 +489,35 @@ footer {
         min-width: 200px;
     }
 
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 32px var(--btn2);
+}
+ 
+.btn:hover, .btn:focus {
+    border-color: none;
+    color: var(--btn1);
+    font-weight: bold;
+}
+.btn {
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: var(--btn1);
+    color: var(--btn2);
+    border: none;
+    font: inherit;
+    margin: 0.5em;
+    padding: 1em 2em;
+    border-radius: 30px;
+}
+
+.questions-offer  a, .knowledge-div a{
+    text-decoration: none;
+}
+
+.questions-offer a:hover, a:active{
+    font-weight: bold;
 }
